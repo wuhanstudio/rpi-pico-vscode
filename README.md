@@ -52,4 +52,8 @@ $ /usr/local/bin/openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -s tcl 
 $ git clone https://github.com/wuhanstudio/rpi-pico-vscode
 ```
 
+```
+$ /usr/local/bin/openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program build/hello-uart.elf verify reset exit"
+```
+
 ![](docs/demo.png)
