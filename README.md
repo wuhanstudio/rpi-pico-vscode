@@ -48,4 +48,8 @@ $ /usr/local/bin/openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -s tcl 
 
 ### Step 4: Install VSCode Cortex-Debug Extension.
 
+```
+$ git clone https://github.com/wuhanstudio/rpi-pico-vscode
+```
+
 ![](docs/demo.png)
