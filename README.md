@@ -1,13 +1,13 @@
 # Raspberrypi Pico Debug in VSCode
 
-Step 1: Install gcc toolchain.
+### Step 1: Install GCC toolchain.
 
 ```
 $ sudo apt-get install gcc-arm-none-eabi gdb-multiarch
 $ ln -s /usr/bin/gdb-multiarch /usr/bin/arm-none-eabi-gdb
 ```
 
-Step 2: Build OpenOCD for raspi pico.
+### Step 2: Build OpenOCD for raspi pico.
 
 ```
 $ sudo apt install automake autoconf build-essential texinfo libtool libftdi-dev libusb-1.0-0-dev
@@ -22,7 +22,7 @@ $ sudo cp contrib/60-openocd.rules /etc/udev/rules.d/
 $ sudo usermod -aG plugdev `whoami`
 ```
 
-Step 3: Build and upload picoprobe.
+### Step 3: Build and upload picoprobe.
 
 ```
 $ git clone https://github.com/raspberrypi/picoprobe.git 
@@ -46,6 +46,6 @@ You can test the connection using:
 $ /usr/local/bin/openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -s tcl -c "adapter speed 5000"
 ```
 
-Step 4: Install VSCode Cortex-Debug Extension.
+### Step 4: Install VSCode Cortex-Debug Extension.
 
 ![](docs/demo.png)
